@@ -1,33 +1,28 @@
-import React from 'react'
-import logo from "../assets/cover.png"
-import Dropdown from 'react-bootstrap/Dropdown';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import React from 'react';
+
 const Navbar = () => {
-
   return (
-    <div className='flex justify-between bg-white'>
-        <Link to="/">
-  <img src={logo} alt="logo" className="h-[74px]" />
-</Link>
+    <nav className="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
+      {/* Logo and Brand Name  */}
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
+        <span className="text-lg font-medium">Shephard Homes</span>
+      </div>
 
-        <div className='flex pt-4 mr-10'>
-            <a href="#" className='p-2 text-sm font-sans no-underline text-black'>Our Properties</a>
-            <a href="#" className='p-2 text-sm font-sans no-underline text-black'>My Bookings</a>
-            <a href="./contact" className='p-2 text-sm font-sans no-underline text-black'>Contact Us</a>
-        <Dropdown>
-      <Dropdown.Toggle variant='none' id="dropdown-basic">
-        About Us
-      </Dropdown.Toggle>
+      {/* {/ Navigation Links and CTA */}
+      <div className="flex items-center space-x-8">
+        <a href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
+          About Us
+        </a>
+        <a href="/properties" className="text-gray-600 hover:text-gray-900 transition-colors">
+          Properties
+        </a>
+        <button className="px-4 py-2 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors">
+          Join Us
+        </button>
+      </div>
+    </nav>
+  );
+};
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Who are we</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Contact Us</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-        </div>
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

@@ -7,19 +7,21 @@ import Properties from '../components/Properties'
 import WhyUs from '../components/WhyUs'
 import Footer from '../components/Footer'
 import Testimonials from '../components/Testimonials'
+import Stats from '../components/Stats'
 
 const HomePage = () => {
   return (
-    <div className='bg-[#F1F3F6]'>
+    <div className='bg-white w-screen'>
       <div className="relative">
         <Hero>
           <SearchCard />
         </Hero>
+      <WhyUs/>
         <div className="pt-24">
           <Properties/>
         </div>
       </div>
-      <WhyUs/>
+      {/* <Stats/> */}
       <Testimonials/>
     </div>
   )

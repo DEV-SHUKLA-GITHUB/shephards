@@ -1,85 +1,51 @@
 import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import img1 from "../assets/carausalImg/1.jpg";
-import img2 from "../assets/carausalImg/2.jpg";
-import img3 from "../assets/carausalImg/3.jpg";
+import { SiWebmoney } from 'react-icons/si'; // Assuming you're using this icon
 
-const GlassmorphicButton = ({ children, onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="relative px-10 py-3 rounded-md
-                bg-black/20 backdrop-blur-sm
-                shadow-[0_4px_15px_rgba(0,0,0,0.1)]
-                transition-all duration-500
-                group
-                hover:bg-black/30
-                hover:border-white/30
-                hover:shadow-[0_8px_25px_rgba(0,0,0,0.2)]
-                hover:scale-105
-                active:scale-95
-                text-white
-                font-normal
-                text-lg
-                tracking-wide
-                overflow-hidden
-                w-44
-                z-10"
-    >
-      <div className="absolute inset-0 bg-gradient-to-r
-                      from-white/[0.05] to-transparent
-                      group-hover:from-white/[0.08] group-hover:to-transparent
-                      transition-all duration-500
-                      rounded-md" />
-      <span className="relative z-10 group-hover:text-white/90 transition-colors duration-500">
-        {children}
-      </span>
-    </button>
-  );
-};
-
-const Hero = ({ children }) => {
-  const [index, setIndex] = useState(0);
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
+const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative">
-      <div className="relative">
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          <Carousel.Item>
-            <img src={img1} className="w-full h-[550px] object-cover" alt="First slide" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <h3 className='font-serif text-white text-5xl pb-4'>First slide label</h3>
-              <GlassmorphicButton onClick={() => console.log('Button 1 clicked')}>
-                Explore
-              </GlassmorphicButton>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={img2} className="w-full h-[550px] object-cover" alt="Second slide" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <h3 className='font-serif text-white text-5xl pb-4'>First slide label</h3>
-              <GlassmorphicButton onClick={() => console.log('Button 2 clicked')}>
-                Explore
-              </GlassmorphicButton>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img src={img3} className="w-full h-[550px] object-cover" alt="Third slide" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <h3 className='font-serif text-white text-5xl pb-4'>First slide label</h3>
-              <GlassmorphicButton onClick={() => console.log('Button 3 clicked')}>
-                Explore
-              </GlassmorphicButton>
-            </div>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-      {/* Search card container positioned at the bottom */}
-      <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 px-4">
-        {children}
+    <div className="container mx-auto px-4 py-16 max-w-4xl text-center">
+      <h1 className="text-4xl md:text-6xl font-semibold text-navy-900 mb-4">
+        Turn your properties into <br /> investments
+      </h1>
+      <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+        <span className='text-[#249063]'>Shepherd</span> partners with unit owners to offer a luxury rental <br /> experience at a reasonable cost.
+      </p>
+      
+      {/* Button with z-index and positioning */}
+      <button className="relative z-50 px-6 py-3 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors mb-16">
+        Contact Us
+      </button>
+
+      <div 
+        className="relative p-24"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="max-w-3xl mx-auto relative">
+          {/* Outermost decorative ring */}
+          <div className="absolute z-10 inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ margin: '-96px' }} />
+          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ margin: '-166px', border: '3px solid #FFD700' }} />
+          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ border: '3px solid #FFD700', margin: '-115px' }} />
+          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ border: '4px solid #F5E6CC', margin: '-68px' }} />
+          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ border: '5px solid #E6D5B8', margin: '-24px' }} />
+
+          {/* Main frame with enhanced border */}
+          <div className="relative rounded-t-full overflow-hidden">
+            <div className="absolute inset-0 rounded-t-full transition-all duration-700" style={{ border: '6px solid white' }} />
+            <img src={img1} alt="Luxury interior" className="w-full h-screen object-cover relative rounded-t-full transition-transform duration-700" />
+          </div>
+        </div>
+
+        {/* Enhanced background glow */}
+        <div 
+          className="absolute inset-0 -z-10 transition-all duration-700"
+          style={{
+            background: 'radial-gradient(circle at center, #FFD700 0%, transparent 70%)',
+          }}
+        />
       </div>
     </div>
   );

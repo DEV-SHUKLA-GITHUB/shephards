@@ -9,7 +9,7 @@ import MiniNavbar from './components/MiniNavbar';
 const App = () => {
   return (
     <Router>
-      <MiniNavbar />
+      {/* <MiniNavbar /> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
