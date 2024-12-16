@@ -1,58 +1,56 @@
-import React from 'react'
-import logo from '../../vector/default-monochrome-white.svg'
-import { CiLocationOn } from "react-icons/ci";
-import { IoLogoInstagram ,IoLogoLinkedin,IoLogoFacebook } from "react-icons/io5";
-import { FaXTwitter } from "react-icons/fa6";
+import React from 'react';
+
 const Footer = () => {
   return (
-    <div className=' text-white'>
-        <div className='bg-[#303131] flex justify-evenly py-14 '>
-            <div>
-            <img src={logo} alt='logo' className='h-[40px] py-2 my-4'/>
-            <h2 className='my-4 text-lg'>Our Destinations</h2>
-            <div>
-            <span className='flex text-gray-400 '><CiLocationOn className='pt-1 mx-1'/> Bangalore</span>
-            <span className='flex text-gray-400 '><CiLocationOn className='pt-1 mx-1'/> Bangalore</span>
-            <span className='flex text-gray-400 '><CiLocationOn className='pt-1 mx-1'/> Bangalore</span>
+    <footer>
+      {/* Golden bar */}
+      <div className="h-8 sm:h-16 bg-[#E9B661]" />
+
+      {/* Main content */}
+      <div className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 pt-8 sm:pt-16 pb-6">
+          {/* CTA Section */}
+          <div className="mb-16 sm:mb-32">
+            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-8">
+              <div className="text-center sm:text-left">
+                <h2 className="text-2xl sm:text-[2.5rem] leading-tight font-medium text-gray-900">
+                  Be a part of the next<br />
+                  real estate revolution
+                </h2>
+                <p className="mt-3 text-gray-700 text-sm sm:text-base">
+                  One liner and stuff about hiring interns and all that jazz. Write a<br className="hidden sm:block" />
+                  bit more descriptions here
+                </p>
+              </div>
+              <button className="bg-[#249063] text-white px-8 sm:px-16 py-3 sm:py-5 rounded-full text-xl sm:text-2xl">
+                Join Us
+              </button>
             </div>
+          </div>
+
+          {/* Navigation - Stack on mobile */}
+          <nav className="mb-8 sm:mb-16">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-2">
+              {/* Navigation links here */}
             </div>
-            <div> <h2 className='my-4 text-lg pt-16'>Our Destinations</h2>
-            <div>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            </div></div>
-            <div>  <h2 className='my-4 text-lg pt-16'>Our Destinations</h2>
-            <div>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            </div></div>
-            <div>  <h2 className='my-4 text-lg pt-16'>Our Destinations</h2>
-            <div>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            <span className='flex text-gray-400 '> Bangalore</span>
-            </div></div>
+          </nav>
+
+          {/* Info sections - Stack on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-x-32 mb-12 sm:mb-20">
+            {/* Contact and address info here */}
+          </div>
+
+          {/* Bottom section */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-4 border-t border-gray-100">
+            <p className="text-sm text-gray-400 order-2 sm:order-1">© 2023 — Copyright</p>
+            <button className="bg-[#249063] p-2 rounded-full order-1 sm:order-2">
+              {/* Scroll to top icon */}
+            </button>
+          </div>
         </div>
-        <div className="bg-black flex justify-between px-20 py-6">
-  <div className="flex space-x-4 text-sm text-gray-400">
-    <span>Copyright &copy; 2024 Shephards</span>
-    <span>T&Cs</span>
-    <span>Cancellation Policy</span>
-    <span>Privacy Policy</span>
-    <span>Sitemap</span>
-  </div>
-  <div className="flex space-x-4">
-    <IoLogoInstagram className="text-3xl text-gray-400" />
-    <IoLogoLinkedin className="text-3xl text-gray-400" />
-    <IoLogoFacebook className="text-3xl text-gray-400" />
-    <FaXTwitter className="text-3xl text-gray-400" />
-  </div>
-</div>
+      </div>
+    </footer>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Footer
+export default Footer;

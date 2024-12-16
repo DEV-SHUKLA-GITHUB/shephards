@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import img1 from "../assets/carausalImg/1.jpg";
-import { SiWebmoney } from 'react-icons/si'; // Assuming you're using this icon
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +13,6 @@ const Hero = () => {
         <span className='text-[#249063]'>Shepherd</span> partners with unit owners to offer a luxury rental <br /> experience at a reasonable cost.
       </p>
       
-      {/* Button with z-index and positioning */}
       <button className="relative z-50 px-6 py-3 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors mb-16">
         Contact Us
       </button>
@@ -25,25 +23,42 @@ const Hero = () => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <div className="max-w-3xl mx-auto relative">
-          {/* Outermost decorative ring */}
-          <div className="absolute z-10 inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ margin: '-96px' }} />
-          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ margin: '-166px', border: '3px solid #FFD700' }} />
-          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ border: '3px solid #FFD700', margin: '-115px' }} />
-          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ border: '4px solid #F5E6CC', margin: '-68px' }} />
-          <div className="absolute inset-0 rounded-t-full transition-all duration-700 ease-in-out" style={{ border: '5px solid #E6D5B8', margin: '-24px' }} />
+      
+          <div className="absolute inset-0 rounded-t-full border border-[#E6D5B8] transition-all duration-500"
+               style={{ margin: '-20px', opacity: '0.4' }} />
+          
+          <div className="absolute inset-0 rounded-t-full border-2 border-[#E6D5B8] transition-all duration-500"
+               style={{ margin: '-40px', opacity: '0.5' }} />
+          
+          <div className="absolute inset-0 rounded-t-full border-2 border-[#FFD700] transition-all duration-500"
+               style={{ margin: '-60px', opacity: '0.3' }} />
+          
+          <div className="absolute inset-0 rounded-t-full border-2 border-[#FFD700] transition-all duration-500"
+               style={{ margin: '-80px', opacity: '0.2' }} />
+          
+          <div className="absolute inset-0 rounded-t-full border-3 border-[#FFD700] transition-all duration-500"
+               style={{ margin: '-100px', opacity: '0.1' }} />
 
-          {/* Main frame with enhanced border */}
+        
           <div className="relative rounded-t-full overflow-hidden">
-            <div className="absolute inset-0 rounded-t-full transition-all duration-700" style={{ border: '6px solid white' }} />
-            <img src={img1} alt="Luxury interior" className="w-full h-screen object-cover relative rounded-t-full transition-transform duration-700" />
+            <div className="absolute inset-0 rounded-t-full border-4 border-white" />
+            <img 
+              src={img1} 
+              alt="Luxury interior" 
+              className={`w-full h-auto object-cover rounded-t-full transition-transform duration-500 ${
+                isHovered ? 'scale-105' : 'scale-100'
+              }`}
+            />
           </div>
         </div>
 
-        {/* Enhanced background glow */}
+
         <div 
-          className="absolute inset-0 -z-10 transition-all duration-700"
+          className={`absolute inset-0 -z-10 transition-opacity duration-500 ${
+            isHovered ? 'opacity-75' : 'opacity-50'
+          }`}
           style={{
-            background: 'radial-gradient(circle at center, #FFD700 0%, transparent 70%)',
+            background: 'radial-gradient(circle at center, rgba(255, 215, 0, 0.15) 0%, transparent 70%)',
           }}
         />
       </div>

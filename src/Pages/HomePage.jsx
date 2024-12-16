@@ -21,7 +21,7 @@ const HomePage = () => {
           <Properties/>
         </div>
       </div>
-      {/* <Stats/> */}
+       <Stats/> 
       <Testimonials/>
     </div>
   )
