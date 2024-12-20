@@ -14,7 +14,7 @@ const Navbar = () => {
      
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gray-200 rounded-full"></div>
-            <span className="text-lg font-medium hidden sm:block">Shephard Homes</span>
+            <a href='/' className="text-lg font-medium hidden sm:block">Shephard Homes</a>
             <span className="text-lg font-medium sm:hidden">SH</span>
           </div>
 
