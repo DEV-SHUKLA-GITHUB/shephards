@@ -2,7 +2,7 @@ import React from 'react';
 import { IoBed } from "react-icons/io5";
 import img1 from '../assets/carausalImg/1.jpg';
 
-const PropertyCard = () => {
+const PropertyCard = ({img}) => {
   return (
     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
       <div className="relative">
@@ -11,11 +11,12 @@ const PropertyCard = () => {
             ₹1880/night
           </span>
         </div>
-        <img 
-          src={img1} 
+        <a href="https://www.airbnb.co.in/" target= "_blank"><img 
+          src={img} 
+          
           className="w-full h-48 sm:h-64 object-cover" 
           alt="Property" 
-        />
+        /></a>
       </div>
       
       <div className="p-3 sm:p-4">

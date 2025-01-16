@@ -41,7 +41,7 @@ const ContactPage = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h1 className="text-4xl font-bold text-[#5F2517]">Get in Touch</h1>
+              <h1 className="text-4xl font-bold text-emerald-600 ">Get in Touch</h1>
               <p className="mt-4 text-lg text-gray-600">
                 Have questions about your stay? We're here to help make your experience exceptional.
               </p>
@@ -49,15 +49,15 @@ const ContactPage = () => {
 
             <div className="bg-white rounded-lg shadow-lg p-6 space-y-6">
               <div className="flex items-center space-x-4">
-                <MapPin className="w-6 h-6 text-[#5F2517]" />
+                <MapPin className="w-6 h-6 text-emerald-600" />
                 <span className="text-gray-600">123 Hosting Street, Airtown</span>
               </div>
               <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-[#5F2517]" />
+                <Phone className="w-6 h-6 text-emerald-600" />
                 <span className="text-gray-600">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-[#5F2517]" />
+                <Mail className="w-6 h-6 text-emerald-600" />
                 <span className="text-gray-600">support@staywise.com</span>
               </div>
             </div>
@@ -129,7 +129,7 @@ const ContactPage = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#5F2517] hover:bg-[#4a1c11] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5F2517] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+                className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5F2517] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
               >
                 {isSubmitting ? (
                   'Sending...'

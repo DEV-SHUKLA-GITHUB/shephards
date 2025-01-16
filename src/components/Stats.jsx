@@ -70,11 +70,11 @@ const StatsGrid = () => {
             <h2 className="text-lg font-medium text-gray-900">Live Properties</h2>
             <p className="text-sm text-gray-600 mt-1">across Bengaluru and 5 more cities</p>
             <div className="mt-4">
-              <img 
-                src="/api/placeholder/400/100" 
+              {/* <img 
+                src="" 
                 alt="Location Map" 
                 className="w-full h-16 object-cover rounded-lg"
-              />
+              /> */}
             </div>
           </div>
         </div>
