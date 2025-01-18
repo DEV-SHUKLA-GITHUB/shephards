@@ -42,13 +42,13 @@ const Hero = () => {
         
           <div className="relative rounded-t-full overflow-hidden">
             <div className="absolute inset-0 rounded-t-full border-4 border-white" />
-            <img 
-              src={img1} 
-              alt="Luxury interior" 
-              className={`w-full h-auto object-cover rounded-t-full transition-transform duration-500 ${
-                isHovered ? 'scale-105' : 'scale-100'
-              }`}
-            />
+              <img 
+                src={img1} 
+                alt="Luxury interior" 
+                className={`w-full h-auto object-cover rounded-t-full transition-transform duration-500 ${
+                  isHovered ? 'scale-105' : 'scale-100'
+                }`}
+              />
           </div>
         </div>
 
